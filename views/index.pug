@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content 
+    if name
+    section.namecard
+        .namecard-hello
+            p.namecard-greeting Welcome,#{name}!
+            form(action="/logout", method="post",class="namecard-exit") 
+                button(type="submit")
+                    img(src="/static/img/close.svg", alt="")
+        h1.namecard-prompt Let's get started
+        a(href="cards" class="namecard-submit") Begin!
